@@ -11,12 +11,12 @@ import {useNavigate} from 'react-router-dom';
 
 const OAuth = () => {
 
-const auth= getAuth();
+const auth= getAuth(app);
+const dispatch=useDispatch();
+const Navigate=useNavigate();
 
     const handleGoogleClick=async()=>{
     const provider=new GoogleAuthProvider();
-    const dispatch=useDispatch();
-    const Navigate=useNavigate();
     provider.setCustomParameters({prompt:'select_account'});
     try{
        const resultFromGoogle= await signInWithPopup(auth,provider); 
