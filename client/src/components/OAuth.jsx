@@ -39,7 +39,7 @@ const Navigate=useNavigate();
     }catch(err){
         console.log(err);
     }
-h    }
+    }
   return (
     <Button type="button" gradientDuoTone={'pinkToOrange'} outline onClick={handleGoogleClick}>
         <AiFillGoogleCircle className='w-6 h-6 mr-2'/> 
